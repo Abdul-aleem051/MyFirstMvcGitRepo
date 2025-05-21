@@ -1,0 +1,44 @@
+﻿@model AdoDotNetMvc.ViewModel.CreateEmployeeViewModel
+
+@{
+    ViewData["Title"] = "Create Employee";
+}
+<h1>@ViewData["Title"]</h1>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+}
+<form asp-action="Create" method="post">
+    <label asp-for="FirstName" class="form-label"></label>
+    <input asp-for="FirstName" class="form-control bg-light text-dark border-primary" />
+    <span asp-validation-for="FirstName" class="text-danger"></span>
+    <br />
+
+    <label asp-for="LastName" class="form-label"></label>
+    <input asp-for="LastName" class="form-control bg-light text-dark border-primary" />
+    <span asp-validation-for="LastName" class="text-danger"></span>
+    <br />
+
+    <label asp-for="Email" class="form-label"></label>
+    <input asp-for="Email" class="form-control bg-light text-dark border-primary" />
+    <span asp-validation-for="Email" class="text-danger"></span>
+    <br />
+
+    <label asp-for="Department" class="form-label"></label>
+    <input asp-for="Department" class="form-control bg-light text-dark border-primary" />
+    <span asp-validation-for="Department" class="text-danger"></span>
+    <br />
+
+    <label asp-for="Salary" class="form-label"></label>
+    <input asp-for="Salary" class="form-control bg-light text-dark border-primary" />
+    <span asp-validation-for="Salary" class="text-danger"></span>
+    <br />
+
+    <label asp-for="HireDate" class="form-label"></label>
+    <input asp-for="HireDate" class="form-control bg-light text-dark border-primary" />
+    <span asp-validation-for="HireDate" class="text-danger"></span>
+    <br />
+    
+    <input type="submit" value="Create Employee" class="btn btn-primary" />
+</form>

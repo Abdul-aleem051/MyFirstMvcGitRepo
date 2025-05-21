@@ -1,0 +1,13 @@
+﻿@model AdoDotNetMvc.ViewModel.EmployeeViewModel
+@{
+    ViewData["Title"] = $"{Model.FirstName} {Model.LastName}'s detail";
+}
+
+<div class="row">
+    <h1>@Model.FirstName</h1>
+    <h1>@Model.LastName</h1>
+    <p>@Model.Email</p>
+    <p>Department: <span class="badge bg-info">@Model.Department</span></p>
+    <p>@Model.Salary</p>
+    <p>@Model.HireDate</p>
+</div>
