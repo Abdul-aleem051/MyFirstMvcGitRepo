@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace AdoDotNetMvc.ViewModel
 {
@@ -14,7 +10,7 @@ namespace AdoDotNetMvc.ViewModel
         [Required(ErrorMessage = "Employee's lastname is required!")]
         public string LastName { get; set; } = default!;
 
-        [Required(ErrorMessage = "Depatment not stated!")]
+        [Required(ErrorMessage = "Select a department")]
         public string Department { get; set; } = default!;
 
         [Required(ErrorMessage = "Invalid Salary value!")]

@@ -1,0 +1,29 @@
+@model AdoDotNetMvc.ViewModel.UpdateDepartmentViewModel
+
+@{
+    ViewData["Title"] = "Update Department";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control bg-light text-dark border-primary" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description" class="form-label"></label>
+        <textarea asp-for="Description" class="form-control bg-light text-dark border-primary" rows="3"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <input type="submit" value="Save Changes" class="btn btn-primary" />
+    <a asp-action="Index" class="btn btn-secondary ml-2">Back to List</a>
+</form>
+
+
+

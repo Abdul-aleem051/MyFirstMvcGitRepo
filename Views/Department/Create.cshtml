@@ -1,0 +1,19 @@
+@model AdoDotNetMvc.ViewModel.CreateDepartmentViewModel
+@{
+    ViewData["Title"] = "Create Department";
+}
+<h1>@ViewData["Title"]</h1>
+<form asp-action="Create" method="post">
+    <label asp-for="Name" class="form-label"></label>
+    <input asp-for="Name" class="form-control bg-light text-dark border-primary" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+    <br />
+
+    <label asp-for="Description" class="form-label"></label>
+    <input asp-for="Description" class="form-control bg-light text-dark border-primary" />
+    <span asp-validation-for="Description" class="text-danger"></span>
+    <br />
+       <input type="submit" value="Create Department" class="btn btn-primary" />
+</form>
+
+

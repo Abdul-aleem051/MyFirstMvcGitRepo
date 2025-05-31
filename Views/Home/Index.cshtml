@@ -34,11 +34,10 @@
                         <td style="vertical-align: middle;">@employee.Salary</td>
                         <td style="vertical-align: middle;">@employee.HireDate</td>
                         <td>
-                            <a asp-action="Detail" asp-route-id="@employee.Id" class="btn btn-secondary">View</a>
+                            <a asp-controller="Home" asp-action="Detail" asp-route-id="@employee.Id" class="btn btn-secondary">View</a>
+                            <a asp-controller="Home" asp-action="Update" asp-route-id="@employee.Id" class="btn btn-success">Update</a>
 
-                            <a asp-action="Update" asp-route-id="@employee.Id" class="btn btn-success">Update</a>
-
-                            <form asp-action="Delete" asp-route-id="@employee.Id" method="post"
+                            <form asp-controller="Home" asp-action="Delete" asp-route-id="@employee.Id" method="post"
                                 style="display:inline-block; margin:0.001;">
                                 <button type="submit" class="btn btn-danger"
                                     onclick="return confirm('Are you sure you want to delete?');">Delete</button>
